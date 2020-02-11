@@ -1,18 +1,18 @@
-## LeetCode 刷题备录
+# LeetCode 刷题备录
 
 ### Array
-26. Remove Duplicatesfrom Sorted Array  
-27. Remove Element
+`26. Remove Duplicatesfrom Sorted Array`  
+`27. Remove Element`
 
 ### DP
-05. Longest Palindromic Substring  
+`05. Longest Palindromic Substring`  
 
 ### HashTable
-01. Two Sum  
-03. Longest Substring Without Repeating Characters  
+`01. Two Sum`  
+`03. Longest Substring Without Repeating Characters`  
 
 ### Math
-07. Reverse Integer  
+`07. Reverse Integer`  
 
 ### String
-02. Add Two Numbers
+`02. Add Two Numbers`
