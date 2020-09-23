@@ -12,6 +12,7 @@
 `53. Maximum Subarray *`  
 `62. Unique Paths`  
 `70. Climbing Stairs *`  
+`72. Edit Distance *`  
 
 ### HashTable
 `01. Two Sum`  
