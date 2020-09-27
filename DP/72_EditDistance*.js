@@ -40,37 +40,37 @@
  */
 var minDistance = function(word1, word2) {
     const row = word1.length;
-	const column = word2.length;
-	if (!row || !column) {
-		return row || column
-	}
+    const column = word2.length;
+    if (!row || !column) {
+        return row || column
+    }
 
-	const dp = [[0,1], [1]];
+    const dp = [[0,1], [1]];
 
-	for (let i = 1; i <= row; i++) {
-		dp[i] = []
-		dp[i][0] = dp[i - 1][0] + 1;
-	}
+    for (let i = 1; i <= row; i++) {
+        dp[i] = []
+        dp[i][0] = dp[i - 1][0] + 1;
+    }
 
-	for (let i = 1; i <= column; i++) {
-		dp[0][i] = dp[0][i-1] + 1
-	}
+    for (let i = 1; i <= column; i++) {
+        dp[0][i] = dp[0][i-1] + 1
+    }
 
-	for (let i = 1; i <= row; i++) {
-		for (let t = 1; t <= column; t++) {
-			// 如果相等，则无需操作，操作步数等于上一次的对比次数
-		if (word1.charAt(i-1) == word2.charAt(t-1)) {
-			dp[i][t] = dp[i-1][t-1]
-		} else {
-			// 假如替换 dp[i][t] = dp[i-1][t-1] + 1
-			// 假如插入 dp[i][t] = dp[i][t-1] + 1
-			// 假如删除 dp[i][t] = dp[i-1][t] + 1
-			dp[i][t] = Math.min(Math.min(dp[i - 1][t - 1], dp[i][t - 1]), dp[i - 1][t]) + 1;
-		}
-		}
-	}
+    for (let i = 1; i <= row; i++) {
+        for (let t = 1; t <= column; t++) {
+            // 如果相等，则无需操作，操作步数等于上一次的对比次数
+        if (word1.charAt(i-1) == word2.charAt(t-1)) {
+            dp[i][t] = dp[i-1][t-1]
+        } else {
+            // 假如替换 dp[i][t] = dp[i-1][t-1] + 1
+            // 假如插入 dp[i][t] = dp[i][t-1] + 1
+            // 假如删除 dp[i][t] = dp[i-1][t] + 1
+            dp[i][t] = Math.min(Math.min(dp[i - 1][t - 1], dp[i][t - 1]), dp[i - 1][t]) + 1;
+        }
+        }
+    }
 
-	return dp[row][column];
+    return dp[row][column];
 };
 // @lc code=end
 
