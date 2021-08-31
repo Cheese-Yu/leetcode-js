@@ -25,7 +25,9 @@ var maxProfit = function(prices) {
     if (prices.length < 2) return 0;
     let result = 0, min = prices[0];
     for (let i of prices) {
+        // 不断找寻最小值
         min = Math.min(min, i);
+        // 假如发生替换，此时 i- min 一定是 0，从下一个值进行判断，有则替换，没有则还是以前的值
         result = Math.max(result, i - min);
     }
     return result;
