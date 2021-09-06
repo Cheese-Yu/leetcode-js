@@ -20,6 +20,7 @@
 - [x] 139. Word Break*  
 - [x] 322. Coin Change  
 - [x] 377. Combination Sum Iv*  
+- [x] 746. Min Cost Climbing Stairs  
 
 ### Design
 - [x] 146. Lru Cache  
