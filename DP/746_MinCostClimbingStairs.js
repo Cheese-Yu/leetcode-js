@@ -67,3 +67,16 @@ var minCostClimbingStairs = function(cost) {
     }
     return Math.min(_oneStepCount, _twoStepCount);
 };
+
+var minCostClimbingStairs2 = function(cost) {
+    const len = cost.length;
+    if (!len) return 0;
+    if (len === 1) return cost[0];
+    if (len === 2) return Math.min(cost[0], cost[1]);
+    
+    for (let i = 2; i < len; i++) {
+        // 本次消耗 + 前面1步或2步的消耗 = 总消耗
+        cost[i] = cost[i] + Math.min(cost[i-1], cost[i-2])
+    }
+    return Math.min(cost[len-1], cost[len-2]);
+};
