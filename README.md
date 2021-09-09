@@ -18,8 +18,10 @@
 - [x] 70. Climbing Stairs*  
 - [x] 72. Edit Distance*  
 - [x] 139. Word Break*  
+- [x] 198. House Robber  
 - [x] 322. Coin Change  
 - [x] 377. Combination Sum Iv*  
+- [x] 740. Delete And Earn  
 - [x] 746. Min Cost Climbing Stairs  
 
 ### Design

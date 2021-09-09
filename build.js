@@ -30,6 +30,7 @@ const build = async () => {
 
         // 排序
         _problems.sort((a, b) => a.split('_')[0] - b.split('_')[0])
+        // 大写字母前插入空格
         problems = _problems.map(el => {
             const names = el.replace('.js', '').split('_');
             return `- [x] ${names[0]}. ${names[1].replace(/(?=(?!^)[A-Z])/g, ' ')}  \n`
